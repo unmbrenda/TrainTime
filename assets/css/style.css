@@ -1,0 +1,24 @@
+
+h1{
+    font-size:50pt;
+    color: white;
+    font-weight:bold;
+}
+
+.btn{
+    background-color:#5c6470;
+}
+.panel-primary>.panel-heading{
+    background-color:#5c6470;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left:15px;
+}
+
+
+
+
+
+  

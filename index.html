@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Schedules</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+
+</head>
+
+<body background="./assets/images/train.jpg">
+    
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB0-4sR-rRPCS_7sngnM5hddrn7TEoHOsM",
+    authDomain: "train-times-53ed0.firebaseapp.com",
+    databaseURL: "https://train-times-53ed0.firebaseio.com",
+    projectId: "train-times-53ed0",
+    storageBucket: "",
+    messagingSenderId: "740757890430"
+  };
+  firebase.initializeApp(config);
+</script>
+    <!-- -========================================================================================================= -->
+    <div class="container">
+        <h1>Train Schedule
+        </h1>
+
+        <!-- =================================================================================================== -->
+        <div class="row">
+            <div class="col-sm-7">
+                <br>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>Current Train Schedule</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body" id="well-section">
+                        <div class="row justify-content-start">
+                            <table>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Next Arrival (hh:mm)</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                                <tr>
+                                    <td id="data-name"></td>
+                                    <td id="data-destination"></td>
+                                    <td id="data-arrival"></td>
+                                    <td id="data-frequency"></td>
+                                    <td id="data-away"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-7">
+                <br>
+                <!-- First panel is for handling the search parameters -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>Search Parameters</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="search-train">Train Name</label>
+                                <input type="text" class="form-control" id="search-train">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="search-destination">Destination</label>
+                                <input type="text" class="form-control" id="search-destination">
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="start-time">First Train Time (hh:mm) Military</label>
+                                <input type="text" class="form-control" id="start-time">
+                            </div>
+
+                            <!-- Here we capture the End Year Parameter -->
+                            <div class="form-group">
+                                <label for="frequency">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+
+                            <!-- Here we have our final submit button -->
+                            <button type="submit" class="btn btn-default" id="run-search"> Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+
+</body>
+
+</html>
