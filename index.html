@@ -13,18 +13,7 @@
 <body background="./assets/images/train.jpg">
     
 <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB0-4sR-rRPCS_7sngnM5hddrn7TEoHOsM",
-    authDomain: "train-times-53ed0.firebaseapp.com",
-    databaseURL: "https://train-times-53ed0.firebaseio.com",
-    projectId: "train-times-53ed0",
-    storageBucket: "",
-    messagingSenderId: "740757890430"
-  };
-  firebase.initializeApp(config);
-</script>
+
     <!-- -========================================================================================================= -->
     <div class="container">
         <h1>Train Schedule
@@ -42,7 +31,7 @@
                     </div>
                     <div class="panel-body" id="well-section">
                         <div class="row justify-content-start">
-                            <table>
+                            <table id = "trainTable">
                                 <tr>
                                     <th>Train Name</th>
                                     <th>Destination</th>
@@ -51,7 +40,7 @@
                                     <th>Minutes Away</th>
                                 </tr>
                                 <tr>
-                                    <td id="data-name"></td>
+                                    <td id="data-train"></td>
                                     <td id="data-destination"></td>
                                     <td id="data-arrival"></td>
                                     <td id="data-frequency"></td>
@@ -112,7 +101,8 @@
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
-
+    <script src="./assets/javascript/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js"></script>
 
 </body>
 
